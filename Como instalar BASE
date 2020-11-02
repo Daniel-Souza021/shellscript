@@ -1,0 +1,13 @@
+DENTRO DA PASTA DO ARQUIVO.SQL
+sudo -u postgres psql -d db_smart < db_sousaeletromoveis.sql
+
+rails c
+Tenant.create name: 'adilson', login_extension: 'adilson'
+Tenant.connect 'adilson'
+Usuario.first.altera_senha 123456, 123456
+** e lembrar de alterar as configurações de email
+** Config. NF mudar para Homologação. 
+
+
+Comando para testar:
+ruby -I test test/models/RelatorioDocumentoSaidaPorItem/relatorio_documento_saida_por_item_test.rb (-n NomeDoTeste)

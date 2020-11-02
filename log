@@ -1,0 +1,18 @@
+COMO FAZER LOG (auditoria)
+
+Em empresa:
+Utiliza auditoria = SIM
+
+Usuario:
+Precisa ser Admin
+
+As ações  Gravar, criar, delete e Atualizar, deverão ser mostradas.
+
+Callback no modelo do programa que está auditando. Talvez ele já esteja sendo chamado em outro modelo (Efeito cascata).
+
+Tudo referente ao Log fazer no branch feature/51305_auditoria_sistemas_quarta_etapa
+
+Atualizar a planilha que a Karine disponiblizou, marcar como Pronta.
+https://docs.google.com/spreadsheets/d/19WIemGDqRpJsmeW_JOaJFa9P25SVum2lPcHYXtSrIOo/edit#gid=0
+
+Agência

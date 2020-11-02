@@ -1,0 +1,33 @@
+RAILS_ENV=sousaeletromoveis rake db:migrate
+RAILS_ENV=sousaeletromoveis rake cadastra_programas
+ruby -I test test/models/Relatorio/relatorio_documento_entrada_saida_test.rb -n 'test_busca_vendedor'
+rake db:migrate RAILS_ENV=test
+
+rake tenants:run[54476_novos_programas_especificos_romaneio_separacao]
+
+rake tenants:migrate
+rake tenants:run[cadastra_programas]
+RAILS_ENV=test rake db:drop db:create db:migrate
+
+usa STEP=quantiadade rake tenants:rollback ou igual eu fiz ali  pega a data antes da migração que tu quer reverter e coloca no VERSION e manda migrar
+
+VERSION=20200312171340 rake tenants:migrate  (reverter migração especifica)
+
+ ps ax | grep puma
+ kill -9 """"
+
+
+Migração:
+rails g migration AddColumnCodigoUnicoToItemTransferenciaLocalEstocagem
+rails g migration CreateDataCompetencia
+rails g migration ChangeColumnsPagamentoDocumento
+
+Cria os atributos das tabelas no arquivo.
+rake tenants:migrate
+rake tenants:rollback
+rake tenants:migrate
+*Criar modelo e inflections
+
+
+
+
